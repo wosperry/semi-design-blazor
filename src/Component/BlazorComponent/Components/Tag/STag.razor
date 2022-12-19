@@ -1,0 +1,15 @@
+﻿<div aria-label={this.props['aria-label'] || isString(children) ? `${closable ? 'Closable ' : ''}Tag: ${children}` : '' } {...wrapProps}>
+    <div className={`${prefixCls}-content`}>
+        {avatarSrc ? this.renderAvatar() : null}
+        {children}
+    </div>
+    {closeIcon}
+</div>
+
+@*<div aria-label={this.props['aria-label'] || isString(children) ? `${closable ? 'Closable ' : '' }Tag: ${children}` : '' } {...wrapProps}>
+    <div className={`${prefixCls}-content`}>
+        {avatarSrc ? this.renderAvatar() : null}
+        {children}
+    </div>
+    {closeIcon}
+</div>*@
