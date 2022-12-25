@@ -1,7 +1,14 @@
-﻿<div aria-label={this.props['aria-label'] || isString(children) ? `${closable ? 'Closable ' : ''}Tag: ${children}` : '' } {...wrapProps}>
-    <div className={`${prefixCls}-content`}>
-        {avatarSrc ? this.renderAvatar() : null}
-        {children}
+﻿@namespace BlazorComponent
+
+@inherits SDomComponentBase
+
+<div class="@CssProvider?.GetClass()">
+    <div class="@(PrefixCls+"-content")">
+        @if (string.IsNullOrWhiteSpace(@AvatarSrc))
+        {
+            <SAvatar src="@AvatarSrc" shape="@AvatarShape" />
+        }
+        @ChildContent
     </div>
     {closeIcon}
 </div>
